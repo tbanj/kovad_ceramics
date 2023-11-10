@@ -3,10 +3,10 @@ import Fade from 'react-reveal/Fade';
 import { Link } from 'react-router-dom';
 import MdTime from 'react-ionicons/lib/MdTime';
 // import logo from '../../assets/logo.png';
-import logo from '../../assets/kovad.png';
+import logo from '../../assets/logo_white.png';
 
 import phone from '../../assets/phone.svg';
-import josla from '../../assets/josla-logo.png';
+import kovad from '../../assets/kovad.png';
 import bolt from '../../assets/bolt.png';
 import mail from '../../assets/mail.svg';
 import location from '../../assets/location.svg';
@@ -109,9 +109,10 @@ const Footer = () => (
           <div className="bolt">
             <img src={bolt} alt="bolt icon" />
           </div>
-          <div className="josla-icon">
-            <a href="http://josla.com.ng/" target="blank">
-              <img src={josla} alt="josla logo" />
+          <span className="px-1">by</span>
+          <div className="kovad-icon">
+            <a href="https://kovad.net/" target="blank">
+              <img src={kovad} alt="kovadlogo" />
             </a>
           </div>
         </div>
