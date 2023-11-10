@@ -109,16 +109,10 @@ const Footer = () => (
           <div className="bolt">
             <img src={bolt} alt="bolt icon" />
           </div>
-<<<<<<< HEAD
           <span className="px-1">by</span>
           <div className="kovad-icon">
             <a href="https://kovad.net/" target="blank">
               <img src={kovad} alt="kovadlogo" />
-=======
-          <div className="josla-icon">
-            <a href="http://josla.com.ng/" target="blank">
-              <img src={josla} alt="josla logo" />
->>>>>>> ab99c46 (updated)
             </a>
           </div>
         </div>
