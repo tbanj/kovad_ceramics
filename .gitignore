@@ -4,15 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-<<<<<<< HEAD
 /note
 note.txt
-=======
-
-note.txt
-
-.txt
->>>>>>> 8df1eba (updated)
 # testing
 /coverage
 
