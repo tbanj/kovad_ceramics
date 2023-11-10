@@ -105,6 +105,16 @@ const Footer = () => (
         <div className="copyright">
           <p>© Copyright Kovad Ceremics</p>
         </div>
+        <div className="powered">
+          <div className="bolt">
+            <img src={bolt} alt="bolt icon" />
+          </div>
+          <div className="josla-icon">
+            <a href="http://josla.com.ng/" target="blank">
+              <img src={josla} alt="josla logo" />
+            </a>
+          </div>
+        </div>
       </footer>
     </Fade>
   </Fragment>
