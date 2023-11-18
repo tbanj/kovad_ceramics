@@ -6,10 +6,10 @@ import tiles from '../../assets/tiles.png';
 import maintenance_2 from '../../assets/maintenance_2.png';
 import fleet from '../../assets/fleet.png';
 import './bodyhome.css';
-import Form1 from '../forms/Form1';
 import ConnectedEnterprise from '../connectedEnterprise/ConnectedEnterprise';
 import Assessment from '../assessment/Assessment';
 import Fade from 'react-reveal/Fade';
+import Form1 from '../forms/Form1';
 
 const BodyHome = () => (
   <Fragment>

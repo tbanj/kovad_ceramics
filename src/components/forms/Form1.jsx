@@ -143,7 +143,7 @@ const Form1 = () => {
                         <input
                           placeholder="Message title"
                           type="text"
-                          value={name}
+                          value={title}
                           onChange={(e) => setTitle(e.target.value)}
                           required
                         />
