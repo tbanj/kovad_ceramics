@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-router-dom';
 import MdTime from 'react-ionicons/lib/MdTime';
-// import logo from '../../assets/logo.png';
-import logo from '../../assets/kovad.png';
+import logo from '../../assets/logo_white.png';
+// import logo from '../../assets/kovad.png';
 
 import phone from '../../assets/phone.svg';
 import kovad from '../../assets/kovad.png';
