@@ -61,15 +61,16 @@ const BodyAbout = () => (
           <div>
             <h3>Vision</h3>
             <p>
-              Connecting people, businesses and communities to a better future
+              Pioneering excellence in sales, repair, and installation of
+              marbles, ceramics, and rubber tiles, shaping spaces with enduring
+              beauty and precision
             </p>
           </div>
           <div>
             <h3 className="text-right">Mission</h3>
             <p>
-              To become the world’s no 1 go to company - applying insights,
-              service quality and innovation to create sustanable growth for
-              business and society
+              Transforming spaces with expert sales, repair, and installation of
+              marbles, ceramics, and rubber tiles.
             </p>
           </div>
         </div>

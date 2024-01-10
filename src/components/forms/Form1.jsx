@@ -11,7 +11,7 @@ import './form1.css';
 
 const enquiryService = new EnquiryService();
 
-const Form1 = () => {
+const Form1 = ({ contact = '' }) => {
   let _isMounted = false;
   const [error, setError] = useState(null);
   const [name, setName] = useState('');
@@ -87,7 +87,7 @@ const Form1 = () => {
   console.warn('_isMounted', _isMounted);
   return (
     <Fragment>
-      <section className="quick-contact-1">
+      <section className="quick-contact-1" id={contact}>
         <h3 className="section-title">Quick Contact</h3>
         <Fade bottom>
           <div className="quick-contact-container">

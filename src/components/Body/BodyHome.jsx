@@ -30,7 +30,7 @@ const BodyHome = () => (
               <p>Wholesales & Retails of Marbles</p>
 
               <div className="learn-more">
-                <Link to="/sales-marbles">
+                <Link to="/sales-marbles" className="text-decoration-none">
                   <i className="fa fa-long-arrow-right" />
                   <p className="excellent-red">Learn more</p>
                 </Link>
@@ -48,7 +48,7 @@ const BodyHome = () => (
               <p>Wholesales & Retails of Ceramic Tiles</p>
 
               <div className="learn-more">
-                <Link to="/sales-tiles">
+                <Link to="/sales-tiles" className="text-decoration-none">
                   <i className="fa fa-long-arrow-right" />
                   <p className="excellent-red">Learn more</p>
                 </Link>
@@ -66,7 +66,7 @@ const BodyHome = () => (
               <p>Maintenance & Housekeeping of Tiles & Marbles</p>
 
               <div className="learn-more" id="three">
-                <Link to="/maintenance">
+                <Link to="/maintenance" className="text-decoration-none">
                   <i className="fa fa-long-arrow-right" />
                   <p className="excellent-red">Learn more</p>
                 </Link>
@@ -75,7 +75,7 @@ const BodyHome = () => (
           </Fade>
         </div>
         <span className="see-more">
-          <Link to="/logistics">
+          <Link to="/services" className="text-decoration-none">
             <button className="see-more-btn">See More</button>
           </Link>
         </span>
