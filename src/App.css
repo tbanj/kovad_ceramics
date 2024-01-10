@@ -45,6 +45,11 @@ main {
   padding: 2.5rem 0 5rem;
 }
 
+main.product-content {
+  position: relative;
+  top: 38px;
+}
+
 .white-link {
   color: #fff;
   transition: all 0.5s ease;
@@ -69,3 +74,16 @@ main {
 .excellent-red {
   color: #ec4125;
 }
+
+.kovad-black {
+  color: #2C2629;
+}
+
+@media screen and (max-width: 850px) {
+  main.product-content {
+    /* position: relative; */
+    top: 400px !important;
+  } 
+}
+
+

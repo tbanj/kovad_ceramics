@@ -22,8 +22,8 @@ import ServiceCard from '../ServiceCard';
 import Footer from '../../footer/Footer';
 import '../service.css';
 
-const Services = () => {
-  const text = 'Services';
+const Installation = () => {
+  const text = 'Installation';
 
   return (
     <Fragment>
@@ -98,4 +98,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Installation;
