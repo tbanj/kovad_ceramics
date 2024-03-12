@@ -102,7 +102,7 @@ const Form1 = ({ contact = '' }) => {
               </div>
               <div className="contact-location">
                 <img src={phone} alt="location icon" />
-                <p href="tel:234-802-312-3876">07050698626</p>
+                <p href="tel:234-807-467-2382">08074672382</p>
               </div>
               <div className="contact-location">
                 <img src={mail} alt="location icon" />
