@@ -19,14 +19,15 @@ const Footer = () => (
         <div className="footer-container">
           <div className="footer footer-services">
             <h4>Services</h4>
-            <Link to="/human-resource-outsourcing" className="white-link">
-              <h6>Human Resource Outsourcing</h6>
+
+            <Link to="/services-installation" className="white-link">
+              <h6>Installation</h6>
             </Link>
-            <Link to="/logistics" className="white-link">
-              <h6>Logistic and Haulage Outsourcing</h6>
+            <Link to="/services-maintenance" className="white-link">
+              <h6>Maintenance</h6>
             </Link>
-            <Link to="/callcenter-solution" className="white-link">
-              <h6>Call Center Solutions</h6>
+            <Link to="/services-repair" className="white-link">
+              <h6>Repair</h6>
             </Link>
           </div>
 
