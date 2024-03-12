@@ -60,7 +60,7 @@ const Footer = () => (
             </div>
             <div className="contact-location">
               <img src={mail} alt="mail icon" />
-              <h6>info@kovadceramics.com</h6>
+              <h6>kovadceramics@gmail.com</h6>
             </div>
 
             <div className="contact-location special">
