@@ -30,7 +30,10 @@ const BodyHome = () => (
               <p>Wholesales & Retails of Marbles</p>
 
               <div className="learn-more">
-                <Link to="/sales-marbles" className="text-decoration-none">
+                <Link
+                  to="/products-rustic_porcelain_tile"
+                  className="text-decoration-none"
+                >
                   <i className="fa fa-long-arrow-right" />
                   <p className="excellent-red">Learn more</p>
                 </Link>
@@ -48,7 +51,10 @@ const BodyHome = () => (
               <p>Wholesales & Retails of Ceramic Tiles</p>
 
               <div className="learn-more">
-                <Link to="/sales-tiles" className="text-decoration-none">
+                <Link
+                  to="/products-glazed_porcelain_tile"
+                  className="text-decoration-none"
+                >
                   <i className="fa fa-long-arrow-right" />
                   <p className="excellent-red">Learn more</p>
                 </Link>
@@ -66,7 +72,10 @@ const BodyHome = () => (
               <p>Maintenance & Housekeeping of Tiles & Marbles</p>
 
               <div className="learn-more" id="three">
-                <Link to="/maintenance" className="text-decoration-none">
+                <Link
+                  to="/services-maintenance"
+                  className="text-decoration-none"
+                >
                   <i className="fa fa-long-arrow-right" />
                   <p className="excellent-red">Learn more</p>
                 </Link>
