@@ -56,7 +56,7 @@ const Footer = () => (
             </div>
             <div className="contact-location">
               <img src={phone} alt="phone icon" />
-              <h6 href="tel:234-807-467-2382">08074672382</h6>
+              <h6 href="tel:234-703-484-9938">07034849938</h6>
             </div>
             <div className="contact-location">
               <img src={mail} alt="mail icon" />
