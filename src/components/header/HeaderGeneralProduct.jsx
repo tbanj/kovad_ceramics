@@ -12,7 +12,7 @@ const HeaderGeneralProduct = ({ image, text, child }) => {
   };
 
   return (
-    <Fragment>
+    <>
       <header>
         <Navbar />
         <div className="header-container">
@@ -31,7 +31,7 @@ const HeaderGeneralProduct = ({ image, text, child }) => {
           </div>
         </div>
       </header>
-    </Fragment>
+    </>
   );
 };
 

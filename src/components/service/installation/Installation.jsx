@@ -26,7 +26,7 @@ const Installation = () => {
   const text = 'Installation';
 
   return (
-    <Fragment>
+    <>
       {/* Metatags  brief explain of  Services for google bots */}
       <MetaTags>
         <title>
@@ -94,7 +94,7 @@ const Installation = () => {
         <Form1 contact="contact" />
       </main>
       <Footer />
-    </Fragment>
+    </>
   );
 };
 

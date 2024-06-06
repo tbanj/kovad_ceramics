@@ -12,9 +12,9 @@
 }
 
 html {
- font-family: 'Nunito', sans-serif;
- font-size: 10px; 
- box-sizing: border-box
+  font-family: 'Nunito', sans-serif;
+  font-size: 10px;
+  box-sizing: border-box;
 }
 
 a {
@@ -26,7 +26,7 @@ ul {
 }
 
 p {
-  font-size: 1.6rem
+  font-size: 1.6rem;
 }
 
 img {
@@ -58,13 +58,11 @@ main.product-content {
 .white-link:hover {
   color: #c2b8b8;
   text-decoration: none;
-
 }
 
 .red-border {
   border: 1px solid red;
   height: 10vh;
-  
 }
 
 .blue-bg {
@@ -76,14 +74,12 @@ main.product-content {
 }
 
 .kovad-black {
-  color: #2C2629;
+  color: #2c2629;
 }
 
 @media screen and (max-width: 850px) {
   main.product-content {
     /* position: relative; */
-    top: 400px !important;
-  } 
+    /* top: 400px !important; */
+  }
 }
-
-

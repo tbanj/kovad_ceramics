@@ -15,7 +15,7 @@ const Navbar = () => {
   const { width } = useWindowDimensions();
 
   return (
-    <Fragment>
+    <>
       <nav className="flex">
         <div className="nav-brand">
           <Link to="/">
@@ -129,7 +129,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-    </Fragment>
+    </>
   );
 };
 

@@ -10,7 +10,7 @@ import ciroma from '../../assets/ciroma.png';
 import ring from '../../assets/ring.png';
 
 const BodyAbout = () => (
-  <Fragment>
+  <>
     <main className="body-about">
       <section>
         <h3 className="section-title">Kovad Ceramics</h3>
@@ -138,7 +138,7 @@ const BodyAbout = () => (
         </Fade>
       </section>
     </main>
-  </Fragment>
+  </>
 );
 
 export default BodyAbout;

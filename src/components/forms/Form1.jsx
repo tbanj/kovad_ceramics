@@ -1,7 +1,7 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import MdTime from 'react-ionicons/lib/MdTime';
-import Fade from 'react-reveal/Fade';
+import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
+import Fade from 'react-reveal/Fade';
+import MdTime from 'react-ionicons/lib/MdTime';
 // import ReCAPTCHA from "react-google-recaptcha";
 import EnquiryService from '../httpService/EnquiryService';
 import mail from '../../assets/mail.svg';
@@ -11,7 +11,7 @@ import './form1.css';
 
 const enquiryService = new EnquiryService();
 
-const Form1 = ({ contact = '' }) => {
+const Form1 = ({ contact }) => {
   let _isMounted = false;
   const [error, setError] = useState(null);
   const [name, setName] = useState('');
@@ -86,7 +86,7 @@ const Form1 = ({ contact = '' }) => {
 
   console.warn('_isMounted', _isMounted);
   return (
-    <Fragment>
+    <>
       <section className="quick-contact-1" id={contact}>
         <h3 className="section-title">Quick Contact</h3>
         <Fade bottom>
@@ -176,7 +176,7 @@ const Form1 = ({ contact = '' }) => {
           </div>
         </Fade>
       </section>
-    </Fragment>
+    </>
   );
 };
 

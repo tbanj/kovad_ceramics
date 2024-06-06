@@ -1,6 +1,5 @@
-.smooth-scroll{
+.smooth-scroll {
   scroll-behavior: smooth;
-
 }
 
 .services {
@@ -34,10 +33,9 @@
   -moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   transition: 0.8s ease-in-out;
   cursor: pointer;
-  
 }
 
-.service-card.product-cards{
+.service-card.product-cards {
   border-radius: 1rem !important;
   border: 0.5px solid #ec4025f8 !important;
 }
@@ -94,10 +92,9 @@
     flex-direction: column;
     max-width: 450px;
   }
-  
+
   .service-card {
     margin-bottom: 30px;
-
   }
 
   .service-card h3 {
@@ -116,22 +113,19 @@
   }
 }
 
-
 .btn-more-products:active {
   color: #fff !important;
   background-color: #ec4025f8 !important;
-    border-color: #ec4025f8 !important;
+  border-color: #ec4025f8 !important;
 }
 
 .btn-more-products:hover {
   color: #fff !important;
   background-color: #ec4025f8 !important;
-    border-color: #ec4025f8 !important;
+  border-color: #ec4025f8 !important;
 }
 
 .btn-more-products {
   color: #ec4025f8 !important;
-    border-color: #ec4025f8 !important;
+  border-color: #ec4025f8 !important;
 }
-
-

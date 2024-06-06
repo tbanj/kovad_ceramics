@@ -34,7 +34,7 @@ const Rustic_porcelain_tile = () => {
   const text = 'Rustic Porcelain Tile';
 
   return (
-    <Fragment>
+    <>
       {/* Metatags  brief explain of  Products for google bots */}
       <MetaTags>
         <title>
@@ -99,10 +99,10 @@ const Rustic_porcelain_tile = () => {
           </section>
         </Fade>
 
-        <Form1 />
+        <Form1 contact="" />
       </main>
       <Footer />
-    </Fragment>
+    </>
   );
 };
 

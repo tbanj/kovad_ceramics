@@ -20,7 +20,7 @@ const Products = () => {
   const text = 'Products';
 
   return (
-    <Fragment>
+    <>
       {/* Metatags  brief explain of  Products for google bots */}
       <MetaTags>
         <title>
@@ -88,11 +88,10 @@ const Products = () => {
             />
           </div>
         </section>
-        <Form1 />
-        3055379387..atanda abdul aziz, first ba
+        <Form1 contact="" />
       </main>
       <Footer />
-    </Fragment>
+    </>
   );
 };
 
