@@ -13,7 +13,7 @@ import location from '../../assets/location.svg';
 import './footer.css';
 
 const Footer = () => (
-  <Fragment>
+  <>
     <Fade bottom>
       <footer>
         <div className="footer-container">
@@ -119,7 +119,7 @@ const Footer = () => (
         </div>
       </footer>
     </Fade>
-  </Fragment>
+  </>
 );
 
 export default Footer;

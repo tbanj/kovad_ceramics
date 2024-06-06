@@ -26,7 +26,7 @@ const Maintenance = () => {
   const text = 'Maintenance';
 
   return (
-    <Fragment>
+    <>
       {/* Metatags  brief explain of  Services for google bots */}
       <MetaTags>
         <title>
@@ -94,7 +94,7 @@ const Maintenance = () => {
         <Form1 contact="contact" />
       </main>
       <Footer />
-    </Fragment>
+    </>
   );
 };
 

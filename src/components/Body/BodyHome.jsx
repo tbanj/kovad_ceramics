@@ -12,7 +12,7 @@ import Fade from 'react-reveal/Fade';
 import Form1 from '../forms/Form1';
 
 const BodyHome = () => (
-  <Fragment>
+  <>
     <main className="body-home">
       <section>
         <div className="d-flex justify-content-center pt-4">
@@ -118,9 +118,9 @@ const BodyHome = () => (
         </section>
       </Fade> */}
 
-      <Form1 />
+      <Form1 contact="" />
     </main>
-  </Fragment>
+  </>
 );
 
 export default BodyHome;
