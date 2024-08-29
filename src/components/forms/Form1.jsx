@@ -23,7 +23,7 @@ const Form1 = ({ contact }) => {
   const handleEmailButtonClick = (e) => {
     e.preventDefault();
     if (message && name) {
-      const mailtoLink = `mailto:kovadceramics@gmail.com?subject=${encodeURIComponent(
+      const mailtoLink = `mailto:info@kovadceramics.com?subject=${encodeURIComponent(
         `Enguiry from ${name}`
       )}&body=${encodeURIComponent(message)}`;
 
@@ -50,7 +50,7 @@ const Form1 = ({ contact }) => {
      
       <p style="font-size: 1.5rem;">${message}</p></div></html>`,
       name: name,
-      email: 'kovadceramics@gmail.com',
+      email: 'info@kovadceramics.com',
       email2: email,
     };
 
@@ -106,7 +106,7 @@ const Form1 = ({ contact }) => {
               </div>
               <div className="contact-location">
                 <img src={mail} alt="location icon" />
-                <p>kovadceramics@gmail.com</p>
+                <p>info@kovadceramics.com</p>
               </div>
               <div className="contact-location special">
                 <MdTime

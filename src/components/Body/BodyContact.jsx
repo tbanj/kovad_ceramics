@@ -30,7 +30,7 @@ const BodyContact = () => (
           <div className="contact-image-container">
             <img src={mail} alt="mail icon" />
           </div>
-          <h6>kovadceramics@gmail.com</h6>
+          <h6>info@kovadceramics.com</h6>
         </div>
         <div className="contact-item">
           <div className="contact-image-container">
