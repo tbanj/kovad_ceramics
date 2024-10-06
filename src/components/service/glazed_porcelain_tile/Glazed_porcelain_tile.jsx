@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Suspense, lazy } from 'react';
 import Fade from 'react-reveal/Fade';
 import Form1 from '../../forms/Form1';
 import MetaTags from 'react-meta-tags';
@@ -10,12 +10,16 @@ import lobbyporcelainfloor2 from '../../../assets/tiles/glazed-porcelain-tiles/l
 import lobbyporcelainfloor3 from '../../../assets/tiles/glazed-porcelain-tiles/lobby-porcelain-floor-tiles-4.png';
 import lobbyporcelainfloor4 from '../../../assets/tiles/glazed-porcelain-tiles/lobby-porcelain-floor-tiles-5.png';
 import importation from '../../../assets/importation.png';
-import HeaderGeneralProduct from '../../header/HeaderGeneralProduct';
+// import HeaderGeneralProduct from '../../header/HeaderGeneralProduct';
 
 import bannerImage from '../../../assets/tiles/glazed-porcelain-tiles/lobby-porcelain-floor-tiles-1.jpeg';
 import ServiceCard from '../ServiceCardProduct';
 import Footer from '../../footer/Footer';
 import '../service.css';
+
+const HeaderGeneralProduct = lazy(() =>
+  import('../../header/HeaderGeneralProduct')
+);
 
 const ProductDetail = () => (
   <div>
@@ -61,62 +65,67 @@ const Glazed_porcelain_tile = () => {
         />
       </MetaTags>
 
-      <HeaderGeneralProduct
-        image={bannerImage}
-        text={text}
-        child={<ProductDetail />}
-      />
-      <main className="product-content">
-        <Fade delay={1000}>
-          <section className="service-container">
-            <h2 className="section-title text-center">Selectable Sizes</h2>
+      <Suspense fallback={<FullPageSpinner />}>
+        <>
+          <HeaderGeneralProduct
+            image={bannerImage}
+            text={text}
+            child={<ProductDetail />}
+          />
+          <main className="product-content">
+            <Fade delay={1000}>
+              <section className="service-container">
+                <h2 className="section-title text-center">Selectable Sizes</h2>
 
-            <section className="services">
-              <div className="service-cards-container service-cards-container-quad">
-                <ServiceCard
-                  image={lobbyporcelainfloor1}
-                  data={{
-                    size: '600*1200mm',
-                    content: `Thickness is 10mm.
+                <section className="services">
+                  <div className="service-cards-container service-cards-container-quad">
+                    <ServiceCard
+                      image={lobbyporcelainfloor1}
+                      data={{
+                        size: '600*1200mm',
+                        content: `Thickness is 10mm.
               Water absorption rate is under 0.05%.`,
-                  }}
-                  slug={`/products-glazed_porcelain_tile-${1}`}
-                />
-                <ServiceCard
-                  image={lobbyporcelainfloor2}
-                  data={{
-                    size: '600*600mm',
-                    content: `Thickness is9 9mm.
+                      }}
+                      slug={`/products-glazed_porcelain_tile-${1}`}
+                    />
+                    <ServiceCard
+                      image={lobbyporcelainfloor2}
+                      data={{
+                        size: '600*600mm',
+                        content: `Thickness is9 9mm.
                 Water absorption rate is under 0.05%.`,
-                  }}
-                  slug={`/products-glazed_porcelain_tile-${2}`}
-                />
+                      }}
+                      slug={`/products-glazed_porcelain_tile-${2}`}
+                    />
 
-                <ServiceCard
-                  image={lobbyporcelainfloor3}
-                  data={{
-                    size: '750*1500mm',
-                    content: `Thickness is 11mm.
+                    <ServiceCard
+                      image={lobbyporcelainfloor3}
+                      data={{
+                        size: '750*1500mm',
+                        content: `Thickness is 11mm.
                 Water absorption rate is under 0.05%.`,
-                  }}
-                  slug={`/products-glazed_porcelain_tile-${3}`}
-                />
-                <ServiceCard
-                  image={lobbyporcelainfloor4}
-                  data={{
-                    size: '800*800mm',
-                    content: `Thickness is 10mm.
+                      }}
+                      slug={`/products-glazed_porcelain_tile-${3}`}
+                    />
+                    <ServiceCard
+                      image={lobbyporcelainfloor4}
+                      data={{
+                        size: '800*800mm',
+                        content: `Thickness is 10mm.
                 Water absorption rate is under 0.05%.`,
-                  }}
-                  slug={`/products-glazed_porcelain_tile-${4}`}
-                />
-              </div>
-            </section>
-          </section>
-        </Fade>
+                      }}
+                      slug={`/products-glazed_porcelain_tile-${4}`}
+                    />
+                  </div>
+                </section>
+              </section>
+            </Fade>
 
-        <Form1 contact="" />
-      </main>
+            <Form1 contact="" />
+          </main>
+        </>
+      </Suspense>
+
       <Footer />
     </>
   );
