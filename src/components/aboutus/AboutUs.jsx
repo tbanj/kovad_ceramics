@@ -1,9 +1,13 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Suspense, lazy } from 'react';
 import MetaTags from 'react-meta-tags';
-import HeaderGeneral from '../header/HeaderGeneral';
-import BodyAbout from '../Body/BodyAbout';
+/* import HeaderGeneral from '../header/HeaderGeneral';
+import BodyAbout from '../Body/BodyAbout'; */
 import Footer from '../footer/Footer';
 import about from '../../assets/about.png';
+import FullPageSpinner from '../loader/FullPageSpinner';
+
+const HeaderGeneral = lazy(() => import('../header/HeaderGeneral'));
+const BodyAbout = lazy(() => import('../Body/BodyAbout'));
 
 const About = () => {
   const text = 'About Kovad Ceramics';
@@ -24,8 +28,13 @@ const About = () => {
         />
       </MetaTags>
 
-      <HeaderGeneral image={about} text={text} />
-      <BodyAbout />
+      <Suspense fallback={<FullPageSpinner />}>
+        <>
+          <HeaderGeneral image={about} text={text} />
+          <BodyAbout />
+        </>
+      </Suspense>
+
       <Footer />
     </>
   );

@@ -1,9 +1,11 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, lazy, Suspense } from 'react';
 import MetaTags from 'react-meta-tags';
-import HeaderGeneral from '../header/HeaderGeneral';
-import BodyContact from '../Body/BodyContact';
 import contact from '../../assets/contact.png';
 import Footer from '../footer/Footer';
+import FullPageSpinner from '../loader/FullPageSpinner';
+
+const HeaderGeneral = lazy(() => import('../header/HeaderGeneral'));
+const BodyContact = lazy(() => import('../Body/BodyContact'));
 
 const Contact = () => {
   const text = 'Contact Us';
@@ -22,8 +24,13 @@ const Contact = () => {
         />
       </MetaTags>
 
-      <HeaderGeneral image={contact} text={text} />
-      <BodyContact />
+      <Suspense fallback={<FullPageSpinner />}>
+        <>
+          <HeaderGeneral image={contact} text={text} />
+          <BodyContact />
+        </>
+      </Suspense>
+
       <Footer />
     </>
   );

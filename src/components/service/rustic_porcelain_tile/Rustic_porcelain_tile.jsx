@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Suspense, lazy } from 'react';
 import Fade from 'react-reveal/Fade';
 import Form1 from '../../forms/Form1';
 import MetaTags from 'react-meta-tags';
@@ -9,12 +9,16 @@ import lobbyporcelainfloor1 from '../../../assets/tiles/Rustic-Porcelain-Tile/ou
 import lobbyporcelainfloor2 from '../../../assets/tiles/Rustic-Porcelain-Tile/outdoor-rustic-floor-tile-3.png';
 import lobbyporcelainfloor3 from '../../../assets/tiles/Rustic-Porcelain-Tile/outdoor-rustic-floor-tile-4.png';
 import importation from '../../../assets/importation.png';
-import HeaderGeneralProduct from '../../header/HeaderGeneralProduct';
+// import HeaderGeneralProduct from '../../header/HeaderGeneralProduct';
 
 import bannerImage from '../../../assets/tiles/Rustic-Porcelain-Tile/outdoor-rustic-floor-tile-1.jpeg';
 import ServiceCard from '../ServiceCardProduct';
 import Footer from '../../footer/Footer';
 import '../service.css';
+
+const HeaderGeneralProduct = lazy(() =>
+  import('../../header/HeaderGeneralProduct')
+);
 
 const ProductDetail = () => (
   <div>
@@ -51,56 +55,61 @@ const Rustic_porcelain_tile = () => {
         />
       </MetaTags>
 
-      <HeaderGeneralProduct
-        image={bannerImage}
-        text={text}
-        child={<ProductDetail />}
-      />
-      <main className="product-content">
-        <Fade delay={1000}>
-          <section className="service-container">
-            <h2 className="section-title text-center">Selectable Sizes</h2>
+      <Suspense fallback={<FullPageSpinner />}>
+        <>
+          <HeaderGeneralProduct
+            image={bannerImage}
+            text={text}
+            child={<ProductDetail />}
+          />
+          <main className="product-content">
+            <Fade delay={1000}>
+              <section className="service-container">
+                <h2 className="section-title text-center">Selectable Sizes</h2>
 
-            <section className="services">
-              <div className="service-cards-container service-cards-container-quad">
-                <ServiceCard
-                  image={lobbyporcelainfloor1}
-                  data={{
-                    size: '600*1200mm',
-                    content: `Thickness is 10mm.
+                <section className="services">
+                  <div className="service-cards-container service-cards-container-quad">
+                    <ServiceCard
+                      image={lobbyporcelainfloor1}
+                      data={{
+                        size: '600*1200mm',
+                        content: `Thickness is 10mm.
                     Water absorption rate is
                     under 0.05%.`,
-                  }}
-                  slug={`/products-rustic_porcelain_tile-${1}`}
-                />
-                <ServiceCard
-                  image={lobbyporcelainfloor2}
-                  data={{
-                    size: '600*600mm',
-                    content: `Thickness is 16mm.
+                      }}
+                      slug={`/products-rustic_porcelain_tile-${1}`}
+                    />
+                    <ServiceCard
+                      image={lobbyporcelainfloor2}
+                      data={{
+                        size: '600*600mm',
+                        content: `Thickness is 16mm.
                     Water absorption rate is
                     under 0.05%.`,
-                  }}
-                  slug={`/products-rustic_porcelain_tile-${2}`}
-                />
+                      }}
+                      slug={`/products-rustic_porcelain_tile-${2}`}
+                    />
 
-                <ServiceCard
-                  image={lobbyporcelainfloor3}
-                  data={{
-                    size: '800*800mm',
-                    content: `Thickness is 10mm.
+                    <ServiceCard
+                      image={lobbyporcelainfloor3}
+                      data={{
+                        size: '800*800mm',
+                        content: `Thickness is 10mm.
                     Water absorption rate is
                     under 0.05%.`,
-                  }}
-                  slug={`/products-rustic_porcelain_tile-${3}`}
-                />
-              </div>
-            </section>
-          </section>
-        </Fade>
+                      }}
+                      slug={`/products-rustic_porcelain_tile-${3}`}
+                    />
+                  </div>
+                </section>
+              </section>
+            </Fade>
 
-        <Form1 contact="" />
-      </main>
+            <Form1 contact="" />
+          </main>
+        </>
+      </Suspense>
+
       <Footer />
     </>
   );
