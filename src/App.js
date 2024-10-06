@@ -8,7 +8,7 @@ import ErrorBoundary from './components/errorBoundary/ErrorBoundary';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
-const Routes = lazy(() => import('./route/index'));
+const Routing = lazy(() => import('./route/index'));
 
 const App = (props) => {
   return (
@@ -17,7 +17,7 @@ const App = (props) => {
       <Router>
         <ErrorBoundary>
           <Suspense fallback={<FullPageSpinner />}>
-            <Routes />
+            <Routing />
           </Suspense>
         </ErrorBoundary>
       </Router>
