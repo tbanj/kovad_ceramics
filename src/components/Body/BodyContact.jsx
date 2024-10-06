@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import mail from '../../assets/mail-red.svg';
 import location from '../../assets/location-red.svg';
 import phone from '../../assets/phone-red.svg';
 import hours from '../../assets/hours-red.svg';
+import FullPageSpinner from '../loader/FullPageSpinner';
 import './bodycontact.css';
 import Form2 from '../forms/Form2';
 
@@ -13,7 +14,9 @@ const BodyContact = () => (
       <div className="contact-items-container">
         <div className="contact-item">
           <div className="contact-image-container">
-            <img src={location} alt="location icon" />
+            <Suspense fallback={<FullPageSpinner />}>
+              <img src={location} alt="location icon" />
+            </Suspense>
           </div>
           <h6>
             142, Lawanson Road, Otun-Oba, <br />
@@ -22,19 +25,29 @@ const BodyContact = () => (
         </div>
         <div className="contact-item">
           <div className="contact-image-container">
-            <img src={phone} alt="phone icon" style={{ color: 'blue' }} />
+            <Suspense fallback={<FullPageSpinner />}>
+              <img src={phone} alt="phone icon" style={{ color: 'blue' }} />
+            </Suspense>
           </div>
           <h6 href="tel:234-807-467-9938">07034849938</h6>
         </div>
         <div className="contact-item">
           <div className="contact-image-container">
-            <img src={mail} alt="mail icon" />
+            <Suspense fallback={<FullPageSpinner />}>
+              <img src={mail} alt="mail icon" />
+            </Suspense>
           </div>
           <h6>info@kovadceramics.com</h6>
         </div>
         <div className="contact-item">
           <div className="contact-image-container">
-            <img src={hours} alt="work hours icon" style={{ color: 'blue' }} />
+            <Suspense fallback={<FullPageSpinner />}>
+              <img
+                src={hours}
+                alt="work hours icon"
+                style={{ color: 'blue' }}
+              />
+            </Suspense>
           </div>
           <h6>Mon - Friday 8am - 5pm</h6>
         </div>

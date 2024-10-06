@@ -29,12 +29,9 @@ const About = () => {
       </MetaTags>
 
       <Suspense fallback={<FullPageSpinner />}>
-        <>
-          <HeaderGeneral image={about} text={text} />
-          <BodyAbout />
-        </>
+        <HeaderGeneral image={about} text={text} />
       </Suspense>
-
+      <BodyAbout />
       <Footer />
     </>
   );
