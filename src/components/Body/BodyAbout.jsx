@@ -1,10 +1,11 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Suspense, lazy } from 'react';
 import Fade from 'react-reveal/Fade';
 import Pulse from 'react-reveal/Pulse';
 import './bodyabout.css';
 import smilingLady from '../../assets/excellent-group.png';
 import yetunde from '../../assets/yetunde.png';
 // import imagePlaceholder from '../../assets/imagePlaceholder.png';
+import FullPageSpinner from '../loader/FullPageSpinner';
 import imagePlaceholder from '../../assets/img_avatar.png';
 import ciroma from '../../assets/ciroma.png';
 import ring from '../../assets/ring.png';
@@ -19,7 +20,9 @@ const BodyAbout = () => (
           <div className="excellent-group-container2">
             <Fade left>
               <div className="excellent-group-image-container">
-                <img src={smilingLady} alt="smiling lady" />
+                <Suspense fallback={<FullPageSpinner />}>
+                  <img src={smilingLady} alt="smiling lady" />
+                </Suspense>
               </div>
             </Fade>
             <Fade right>
@@ -77,22 +80,15 @@ const BodyAbout = () => (
       </div>
       <section />
 
-      {/* <section className="values">
-        <h3 className="section-title pr-5 pb-4">Company values</h3>
-        <Pulse>
-          <div className="values-image-container">
-            <img src={ring} alt="company values" />
-          </div>
-        </Pulse>
-      </section> */}
-
       <section className="directors mt-5">
         <h3 className="section-title text-right pr-5">Meet Our Team</h3>
         <Fade>
           <div className="directors-container">
             <div className="director-container">
               <div className="director-image-container pb-3">
-                <img src={imagePlaceholder} alt="director1" />
+                <Suspense fallback={<FullPageSpinner />}>
+                  <img src={imagePlaceholder} alt="director1" />
+                </Suspense>
               </div>
               <h4>Mr Abimbola Ajao</h4>
               <p>Chairman</p>
@@ -100,7 +96,9 @@ const BodyAbout = () => (
 
             <div className="director-container">
               <div className="director-image-container pb-3">
-                <img src={imagePlaceholder} alt="director2" />
+                <Suspense fallback={<FullPageSpinner />}>
+                  <img src={imagePlaceholder} alt="director2" />
+                </Suspense>
               </div>
               <meta
                 property="keywords"
@@ -113,27 +111,13 @@ const BodyAbout = () => (
 
             <div className="director-container">
               <div className="director-image-container pb-3">
-                <img src={imagePlaceholder} alt="director3" />
+                <Suspense fallback={<FullPageSpinner />}>
+                  <img src={imagePlaceholder} alt="director3" />
+                </Suspense>
               </div>
               <h4>Mr Olabanji Smith</h4>
               <p>C.T.O</p>
             </div>
-
-            {/* <div className="director-container">
-              <div className="director-image-container pb-3">
-                <img src={imagePlaceholder} alt="director4" />
-              </div>
-              <h4>Mrs Olufunmilola Ogunranti</h4>
-              <p>Director</p>
-            </div>
-
-            <div className="director-container">
-              <div className="director-image-container pb-3">
-                <img src={ciroma} alt="director5" />
-              </div>
-              <h4>Mr Mohammed Ciroma</h4>
-              <p>Director</p>
-            </div> */}
           </div>
         </Fade>
       </section>

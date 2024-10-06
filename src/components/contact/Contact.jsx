@@ -25,12 +25,9 @@ const Contact = () => {
       </MetaTags>
 
       <Suspense fallback={<FullPageSpinner />}>
-        <>
-          <HeaderGeneral image={contact} text={text} />
-          <BodyContact />
-        </>
+        <HeaderGeneral image={contact} text={text} />
       </Suspense>
-
+      <BodyContact />
       <Footer />
     </>
   );
