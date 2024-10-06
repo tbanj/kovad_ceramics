@@ -15,6 +15,7 @@ import bannerImage from '../../../assets/tiles/Rustic-Porcelain-Tile/outdoor-rus
 import ServiceCard from '../ServiceCardProduct';
 import Footer from '../../footer/Footer';
 import '../service.css';
+import FullPageSpinner from '../../loader/FullPageSpinner';
 
 const HeaderGeneralProduct = lazy(() =>
   import('../../header/HeaderGeneralProduct')
