@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import MetaTags from 'react-meta-tags';
 import HeaderGeneral from '../header/HeaderGeneral';
-import about from '../../assets/about.png';
 import BodyAbout from '../Body/BodyAbout';
 import Footer from '../footer/Footer';
+import about from '../../assets/about.png';
 
 const About = () => {
   const text = 'About Kovad Ceramics';
