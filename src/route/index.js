@@ -1,4 +1,7 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import NoMatch from '../components/notfound/NotFound';
+import Home from '../components/home/Home';
 const About = lazy(() => import('../components/aboutus/AboutUs'));
 const Contact = lazy(() => import('../components/contact/Contact'));
 const Service = lazy(() => import('../components/service/service/Services'));
@@ -30,7 +33,6 @@ const Routing = () => {
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
-      <Route path="/test-data" component={TestCom} />
       <Route path="/contact" component={Contact} />
       <Route path="/products" component={Products} />
       <Route
