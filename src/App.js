@@ -1,8 +1,8 @@
-import React, { Component, Fragment, Suspense, lazy } from 'react';
+import { lazy } from 'react';
+import FullPageSpinner from './components/loader/FullPageSpinner';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import FullPageSpinner from './components/loader/FullPageSpinner';
 import Home from './components/home/Home';
 // import Maintenance from './components/maintenance/Maintenance';
 import TestCom from './components/testCom/TestCom';
@@ -44,7 +44,7 @@ const App = (props) => {
       <ToastContainer />
       <Router>
         <ErrorBoundary>
-          <Suspense fallback={FullPageSpinner}>
+          <Suspense fallback={<FullPageSpinner />}>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
