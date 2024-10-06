@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+import React, { lazy, Suspense } from 'react';
 import FullPageSpinner from './components/loader/FullPageSpinner';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
