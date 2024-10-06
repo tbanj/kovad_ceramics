@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Suspense, lazy } from 'react';
 import Fade from 'react-reveal/Fade';
 import Form1 from '../../forms/Form1';
 import MetaTags from 'react-meta-tags';
