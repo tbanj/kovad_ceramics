@@ -57,59 +57,63 @@ const Rustic_porcelain_tile = () => {
       </MetaTags>
 
       <Suspense fallback={<FullPageSpinner />}>
-        <>
-          <HeaderGeneralProduct
-            image={bannerImage}
-            text={text}
-            child={<ProductDetail />}
-          />
-          <main className="product-content">
-            <Fade delay={1000}>
-              <section className="service-container">
-                <h2 className="section-title text-center">Selectable Sizes</h2>
-
-                <section className="services">
-                  <div className="service-cards-container service-cards-container-quad">
-                    <ServiceCard
-                      image={lobbyporcelainfloor1}
-                      data={{
-                        size: '600*1200mm',
-                        content: `Thickness is 10mm.
-                    Water absorption rate is
-                    under 0.05%.`,
-                      }}
-                      slug={`/products-rustic_porcelain_tile-${1}`}
-                    />
-                    <ServiceCard
-                      image={lobbyporcelainfloor2}
-                      data={{
-                        size: '600*600mm',
-                        content: `Thickness is 16mm.
-                    Water absorption rate is
-                    under 0.05%.`,
-                      }}
-                      slug={`/products-rustic_porcelain_tile-${2}`}
-                    />
-
-                    <ServiceCard
-                      image={lobbyporcelainfloor3}
-                      data={{
-                        size: '800*800mm',
-                        content: `Thickness is 10mm.
-                    Water absorption rate is
-                    under 0.05%.`,
-                      }}
-                      slug={`/products-rustic_porcelain_tile-${3}`}
-                    />
-                  </div>
-                </section>
-              </section>
-            </Fade>
-
-            <Form1 contact="" />
-          </main>
-        </>
+        <HeaderGeneralProduct
+          image={bannerImage}
+          text={text}
+          child={<ProductDetail />}
+        />
       </Suspense>
+      <main className="product-content">
+        <Fade delay={1000}>
+          <section className="service-container">
+            <h2 className="section-title text-center">Selectable Sizes</h2>
+
+            <section className="services">
+              <div className="service-cards-container service-cards-container-quad">
+                <Suspense fallback={<FullPageSpinner />}>
+                  <ServiceCard
+                    image={lobbyporcelainfloor1}
+                    data={{
+                      size: '600*1200mm',
+                      content: `Thickness is 10mm.
+                    Water absorption rate is
+                    under 0.05%.`,
+                    }}
+                    slug={`/products-rustic_porcelain_tile-${1}`}
+                  />
+                </Suspense>
+                <Suspense fallback={<FullPageSpinner />}>
+                  <ServiceCard
+                    image={lobbyporcelainfloor2}
+                    data={{
+                      size: '600*600mm',
+                      content: `Thickness is 16mm.
+                    Water absorption rate is
+                    under 0.05%.`,
+                    }}
+                    slug={`/products-rustic_porcelain_tile-${2}`}
+                  />
+                </Suspense>
+
+                <Suspense fallback={<FullPageSpinner />}>
+                  <ServiceCard
+                    image={lobbyporcelainfloor3}
+                    data={{
+                      size: '800*800mm',
+                      content: `Thickness is 10mm.
+                    Water absorption rate is
+                    under 0.05%.`,
+                    }}
+                    slug={`/products-rustic_porcelain_tile-${3}`}
+                  />
+                </Suspense>
+              </div>
+            </section>
+          </section>
+        </Fade>
+
+        <Form1 contact="" />
+      </main>
 
       <Footer />
     </>

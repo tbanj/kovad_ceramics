@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Suspense, lazy } from 'react';
 import Fade from 'react-reveal/Fade';
 import Form1 from '../../forms/Form1';
 import MetaTags from 'react-meta-tags';
@@ -17,7 +17,7 @@ import HeaderGeneral from '../../header/HeaderGeneral';
 import bannerImage from '../../../assets/marble_installer.jpeg';
 
 // import bannerImage from '../../../assets/services.png';
-
+import FullPageSpinner from '../../loader/FullPageSpinner';
 import ServiceCard from '../ServiceCard';
 import Footer from '../../footer/Footer';
 import '../service.css';
@@ -45,8 +45,10 @@ const Maintenance = () => {
           content="Installation of ceramics tiles, Maintenance of ceramics tiles, Repair Service of ceramics tiles"
         />
       </MetaTags>
+      <Suspense fallback={<FullPageSpinner />}>
+        <HeaderGeneral image={bannerImage} text={text} />
+      </Suspense>
 
-      <HeaderGeneral image={bannerImage} text={text} />
       <main>
         <Fade delay={1000}>
           <section className="service-container">
@@ -73,21 +75,28 @@ const Maintenance = () => {
 
         <section className="services">
           <div className="service-cards-container">
-            <ServiceCard
-              image={fleet}
-              title={'INSTALLATION SERVICE TEAM'}
-              slug="/services-installation"
-            />
-            <ServiceCard
-              image={courier}
-              title={'MAINTENANCE SERVICE TEAM'}
-              slug="/services-maintenance"
-            />
-            <ServiceCard
-              image={drivers}
-              title={'REPAIR SERVICE TEAM'}
-              slug="/services-repair"
-            />
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard
+                image={fleet}
+                title={'INSTALLATION SERVICE TEAM'}
+                slug="/services-installation"
+              />
+            </Suspense>
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard
+                image={courier}
+                title={'MAINTENANCE SERVICE TEAM'}
+                slug="/services-maintenance"
+              />
+            </Suspense>
+
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard
+                image={drivers}
+                title={'REPAIR SERVICE TEAM'}
+                slug="/services-repair"
+              />
+            </Suspense>
           </div>
         </section>
 
