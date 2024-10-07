@@ -32,32 +32,36 @@ const OtherServices = () => {
       </MetaTags>
 
       <Suspense fallback={<FullPageSpinner />}>
-        <>
-          <HeaderGeneral image={bannerImage} text={text} />
-          <main>
-            <section className="service-container">
-              <h3 className="section-title">Our Other Business Services</h3>
-
-              <div className="service-text">
-                <p>
-                  Kovad Ceramics is structured and equipped to provide the
-                  following business support services:
-                </p>
-              </div>
-            </section>
-
-            <section className="services">
-              <div className="service-cards-container">
-                <ServiceCard image={business} title={'BUSINESS MANAGEMENT'} />
-                <ServiceCard image={general} title={'GENERAL CONTRACT'} />
-                <ServiceCard image={supply} title={'SUPPLY CHAIN MANAGEMENT'} />
-              </div>
-            </section>
-
-            <Form1 contact="" />
-          </main>
-        </>
+        <HeaderGeneral image={bannerImage} text={text} />
       </Suspense>
+      <main>
+        <section className="service-container">
+          <h3 className="section-title">Our Other Business Services</h3>
+
+          <div className="service-text">
+            <p>
+              Kovad Ceramics is structured and equipped to provide the following
+              business support services:
+            </p>
+          </div>
+        </section>
+
+        <section className="services">
+          <div className="service-cards-container">
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard image={business} title={'BUSINESS MANAGEMENT'} />
+            </Suspense>
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard image={general} title={'GENERAL CONTRACT'} />
+            </Suspense>
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard image={supply} title={'SUPPLY CHAIN MANAGEMENT'} />
+            </Suspense>
+          </div>
+        </section>
+
+        <Form1 contact="" />
+      </main>
 
       <Footer />
     </>

@@ -39,62 +39,76 @@ const Products = () => {
       </MetaTags>
 
       <Suspense fallback={<FullPageSpinner />}>
-        <>
-          <HeaderGeneral image={bannerImage} text={text} />
-          <main>
-            <Fade delay={1000}>
-              <section className="service-container">
-                <h3 className="section-title">One Stop Tile Collections</h3>
-                <div className="service-text">
-                  <p>
-                    Kovad Ceramics is a subsidiary company of Kovad Ventures.
-                    <br /> Kovad Ceramics includes:-
-                    <br /> Kovad Ceramics Sales of Ceramics Tiles & Marbles
-                    <br /> Kovad Ceramics Installation & Maintenance of Ceramics
-                    Tiles & Marbles
-                    <br /> <br />
-                  </p>
-                </div>
-              </section>
-            </Fade>
-            <section className="services">
-              <div className="service-cards-container service-cards-container-quad">
-                <ServiceCard
-                  image={glazed_Porcelain_Tile}
-                  title={'Glazed Porcelain Tile'}
-                  slug="/products-glazed_porcelain_tile"
-                />
-                <ServiceCard
-                  image={rustic_Porcelain_Tile}
-                  title={'Rustic Porcelain Tile'}
-                  slug="/products-rustic_porcelain_tile"
-                />
-                <ServiceCard
-                  image={wood_Look_Tile}
-                  title={'Wood Look Tile'}
-                  slug="/products-rustic_porcelain_tile"
-                />
-                <ServiceCard
-                  image={interior_Wall_Tile}
-                  title={'Interior Wall Tile'}
-                  slug="/products-rustic_porcelain_tile"
-                />
-                <ServiceCard
-                  image={exterior_Wall_Tile}
-                  title={'Exterior Wall Tile'}
-                  slug="/products-rustic_porcelain_tile"
-                />
-                <ServiceCard
-                  image={skirting_Tile}
-                  title={'Skirting Tile'}
-                  slug="/products-rustic_porcelain_tile"
-                />
-              </div>
-            </section>
-            <Form1 contact="" />
-          </main>
-        </>
+        <HeaderGeneral image={bannerImage} text={text} />
       </Suspense>
+
+      <main>
+        <Fade delay={1000}>
+          <section className="service-container">
+            <h3 className="section-title">One Stop Tile Collections</h3>
+            <div className="service-text">
+              <p>
+                Kovad Ceramics is a subsidiary company of Kovad Ventures.
+                <br /> Kovad Ceramics includes:-
+                <br /> Kovad Ceramics Sales of Ceramics Tiles & Marbles
+                <br /> Kovad Ceramics Installation & Maintenance of Ceramics
+                Tiles & Marbles
+                <br /> <br />
+              </p>
+            </div>
+          </section>
+        </Fade>
+        <section className="services">
+          <div className="service-cards-container service-cards-container-quad">
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard
+                image={glazed_Porcelain_Tile}
+                title={'Glazed Porcelain Tile'}
+                slug="/products-glazed_porcelain_tile"
+              />
+            </Suspense>
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard
+                image={rustic_Porcelain_Tile}
+                title={'Rustic Porcelain Tile'}
+                slug="/products-rustic_porcelain_tile"
+              />
+            </Suspense>
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard
+                image={wood_Look_Tile}
+                title={'Wood Look Tile'}
+                slug="/products-rustic_porcelain_tile"
+              />
+            </Suspense>
+
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard
+                image={interior_Wall_Tile}
+                title={'Interior Wall Tile'}
+                slug="/products-rustic_porcelain_tile"
+              />
+            </Suspense>
+
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard
+                image={exterior_Wall_Tile}
+                title={'Exterior Wall Tile'}
+                slug="/products-rustic_porcelain_tile"
+              />
+            </Suspense>
+
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard
+                image={skirting_Tile}
+                title={'Skirting Tile'}
+                slug="/products-rustic_porcelain_tile"
+              />
+            </Suspense>
+          </div>
+        </section>
+        <Form1 contact="" />
+      </main>
 
       <Footer />
     </>

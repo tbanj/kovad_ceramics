@@ -49,56 +49,61 @@ const Repair = () => {
         />
       </MetaTags>
       <Suspense fallback={<FullPageSpinner />}>
-        <>
-          <HeaderGeneral image={bannerImage} text={text} />
-          <main>
-            <Fade delay={1000}>
-              <section className="service-container">
-                <h3 className="section-title">
-                  Our Installation, Maintenance and Repair Service
-                </h3>
-                <div className="service-text">
-                  <p>
-                    We are a wholly owned indigenous company incorporated in
-                    Nigeria to offer sales, installation, maintenance and repair
-                    works on ceramics tiles and marbles.
-                    <br /> <br /> As an innovative and service driven corporate
-                    entity, Kovad Ceramics understand the value of expertise,
-                    specialty and has continuously upheld them. We also place
-                    great emphasis on providing our services in a safe and
-                    environmental friendly manner. In line with this, we have
-                    consistently developed a well-tailored and robust package to
-                    suit our clients&#39; needs and adds value to them at a cost
-                    efficient manner
-                  </p>
-                </div>
-              </section>
-            </Fade>
-
-            <section className="services">
-              <div className="service-cards-container">
-                <ServiceCard
-                  image={fleet}
-                  title={'INSTALLATION SERVICE TEAM'}
-                  slug="/services-installation"
-                />
-                <ServiceCard
-                  image={courier}
-                  title={'MAINTENANCE SERVICE TEAM'}
-                  slug="/services-maintenance"
-                />
-                <ServiceCard
-                  image={drivers}
-                  title={'REPAIR SERVICE TEAM'}
-                  slug="/services-repair"
-                />
-              </div>
-            </section>
-
-            <Form1 contact="contact" />
-          </main>
-        </>
+        <HeaderGeneral image={bannerImage} text={text} />
       </Suspense>
+      <main>
+        <Fade delay={1000}>
+          <section className="service-container">
+            <h3 className="section-title">
+              Our Installation, Maintenance and Repair Service
+            </h3>
+            <div className="service-text">
+              <p>
+                We are a wholly owned indigenous company incorporated in Nigeria
+                to offer sales, installation, maintenance and repair works on
+                ceramics tiles and marbles.
+                <br /> <br /> As an innovative and service driven corporate
+                entity, Kovad Ceramics understand the value of expertise,
+                specialty and has continuously upheld them. We also place great
+                emphasis on providing our services in a safe and environmental
+                friendly manner. In line with this, we have consistently
+                developed a well-tailored and robust package to suit our
+                clients&#39; needs and adds value to them at a cost efficient
+                manner
+              </p>
+            </div>
+          </section>
+        </Fade>
+
+        <section className="services">
+          <div className="service-cards-container">
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard
+                image={fleet}
+                title={'INSTALLATION SERVICE TEAM'}
+                slug="/services-installation"
+              />
+            </Suspense>
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard
+                image={courier}
+                title={'MAINTENANCE SERVICE TEAM'}
+                slug="/services-maintenance"
+              />
+            </Suspense>
+
+            <Suspense fallback={<FullPageSpinner />}>
+              <ServiceCard
+                image={drivers}
+                title={'REPAIR SERVICE TEAM'}
+                slug="/services-repair"
+              />
+            </Suspense>
+          </div>
+        </section>
+
+        <Form1 contact="contact" />
+      </main>
 
       <Footer />
     </>
